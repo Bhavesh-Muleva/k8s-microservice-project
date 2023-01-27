@@ -310,7 +310,7 @@ spec:
         image: redis:alpine
         ports:
         - containerPort: 6379
-        volumesMounts:
+        volumeMounts:
         - name: redis-data
           mountPath: /data 
       volumes:
