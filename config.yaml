@@ -1,3 +1,22 @@
+#improve this configuration file by adding version to image
+#Include liveliness and readiness probe to container to check status of container.
+#e.g readinessProbe:
+#      periodSeconds: 5
+#      exec:
+#        command: ["/bin/grpc_health_probe", "-addr=:50051"]
+#    livenessProbe:
+#      exec:
+#        command: ["/bin/grpc_health_probe", "-addr=:50051"]
+# Add Resources limit like cpu and memory for best practices.
+#    resources:
+#      requests:
+#        cpu: 100m
+#        memory: 64Mi
+#      limits:
+#        cpu: 200m
+#        memory: 128Mi
+
+
 #1
 ---
 apiVersion: apps/v1
