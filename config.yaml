@@ -1,13 +1,17 @@
-#improve this configuration file by adding version to image
-#Include liveliness and readiness probe to container to check status of container.
+#1. improve this configuration file by adding version to image
+#
+#2. Include liveliness and readiness probe to container to check status of container.
+#
 #e.g readinessProbe:
 #      periodSeconds: 5
 #      exec:
 #        command: ["/bin/grpc_health_probe", "-addr=:50051"]
 #    livenessProbe:
+#      periodSeconds: 5
 #      exec:
 #        command: ["/bin/grpc_health_probe", "-addr=:50051"]
-# Add Resources limit like cpu and memory for best practices.
+#
+#3. Add Resources limit like cpu and memory for best practices.
 #    resources:
 #      requests:
 #        cpu: 100m
@@ -15,7 +19,8 @@
 #      limits:
 #        cpu: 200m
 #        memory: 128Mi
-
+#
+#4. include service type to loadbalancer because NodePort is not consider as best practices.
 
 #1
 ---
